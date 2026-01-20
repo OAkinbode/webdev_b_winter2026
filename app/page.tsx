@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Header from "../components/header";
 import Calculate, { calculateSomething } from "@/components/calculate";
+import { returnUserDetails } from "@/util/simulate_api";
+import NicePictures from "@/components/nice_pictures";
+import Link from "next/link";
 
 export default function Home() {
   const results = calculateSomething();
@@ -18,7 +21,13 @@ export default function Home() {
             priority
           />
           <Calculate />
-          <div>{results.sum}</div>
+          <div>Welcome {returnUserDetails().name}</div>
+          <NicePictures />
+        </div>
+        <div className="italic text-blue-500 text-3xl">
+          <nav>
+            <Link href="/bowlerhat">Bowlerhat Page</Link>
+          </nav>
         </div>
       </main>
     </div>
