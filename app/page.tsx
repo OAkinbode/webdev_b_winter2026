@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "../components/header";
 import { returnUserDetails } from "@/util/simulate_api";
 import DisplayUserDetails from "@/components/displayUserDetails";
+import Teddysearch from "@/components/teddy_search";
 
 import Link from "next/link";
 
@@ -29,6 +30,7 @@ export default function Home() {
           height={200}
           priority
         />
+        <Teddysearch />
       </div>
       <div className="italic text-blue-500 text-3xl">
         <nav>
