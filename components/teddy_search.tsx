@@ -12,6 +12,7 @@ export default function Teddysearch() {
     height: 0,
     color: "",
   });
+  const [teddyavailable, setTeddyAvailability] = useState<boolean>(false);
 
   const changeValues = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -20,7 +21,8 @@ export default function Teddysearch() {
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Form is submitted: ${searchparams.color}, ${searchparams.height}`);
+
+    setTeddyAvailability(true);
   };
 
   return (
@@ -45,6 +47,13 @@ export default function Teddysearch() {
         />
         <button type="submit">Search</button>
       </form>
+      <div className="text-2xl text-red-700">
+        {/* {teddyavailable
+          ? `Form is submitted: We have a ${searchparams.color} Teddy bear of ${searchparams.height} inches height`
+          : ""} */}
+        {teddyavailable &&
+          `Form is submitted: We have a ${searchparams.color} Teddy bear of ${searchparams.height} inches height`}
+      </div>
     </div>
   );
 }
