@@ -17,6 +17,13 @@ export const divide = (a: number, b: number): number => {
   return a / b;
 };
 
+export const nameList: string[] = [
+  "steven bowler",
+  "jerry finder",
+  "felix fisher",
+  "peter parker",
+];
+
 export const statement = () => {
   return "This is a test statement.";
 };
