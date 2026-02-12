@@ -11,6 +11,7 @@ export default function Counter() {
 
   return (
     <div className="flex flex-col">
+      <p>Hello from Counter component</p>
       <p>Count: {count}</p>
       <button onClick={increment}>Increment</button>
       <button onClick={() => setCount(count - 1)}>Decrement</button>
