@@ -6,6 +6,7 @@ import { returnUserName } from "@/util/simulate_api";
 import { useUserStore } from "@/util/store";
 import TeddyDisplay from "@/components/teddy_display";
 import TeddyForm from "@/components/teddy_form";
+import TestApiCall from "@/components/test_api_call";
 
 export default function BowlerhatPage() {
   const [teddies, setTeddies] = useState<string[]>([]);
@@ -38,6 +39,8 @@ export default function BowlerhatPage() {
         </div>
       </div>
       <div>{user}</div>
+
+      <TestApiCall />
       <Link href="/">Go Back Home</Link>
     </div>
   );

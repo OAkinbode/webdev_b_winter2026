@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Header from "../components/header";
 import { returnUserDetails } from "@/util/simulate_api";
 import DisplayUserDetails from "@/components/displayUserDetails";
+import { useUserStore } from "@/util/store";
 import Teddysearch from "@/components/teddy_search";
 
 import Link from "next/link";
 
 export default function Home() {
+  const user = useUserStore((state) => state.user);
+
   const capitalizer = (str: string) => {
     return str.toUpperCase();
   };
@@ -15,7 +20,7 @@ export default function Home() {
       <Header />
       <div className=" w-full p-2 px-4">
         <DisplayUserDetails
-          name="Felix"
+          name={user.length > 0 ? user : "Guest"}
           appelation="Mr."
           capitalizer={capitalizer}
         />
