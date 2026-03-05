@@ -11,6 +11,8 @@ export default function TestApiCall() {
     if (inputValue) {
       console.log("Input value changed:", inputValue);
     }
+    if (inputValue.length > 10) {
+    }
   }, [inputValue]);
 
   const onChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
