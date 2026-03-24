@@ -41,6 +41,7 @@ export default function BowlerhatPage() {
       <div>{user}</div>
 
       <TestApiCall />
+      <Link href="/bowlerhat/bowlerhatred">Go to bowlerhat red</Link>
       <Link href="/">Go Back Home</Link>
     </div>
   );
